@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push the image to the bottom */
+    align-items: center;
+    min-height: 100vh; /* Ensure full height of viewport */
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    text-align: left;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultMessage {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Combined styling for top and bottom images */
+.top-image img, .bottom-image img {
+    max-width: 100%; /* Ensure images scale properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners for better aesthetics */
+    margin-top: 20px; /* Add a 20px boundary to the top */
+}
+
+#topImage, #botImage {
+    margin-top: 20px !important; /* Force the margin */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding inside the container */
+        margin-top: 5px; /* Reduce top margin */
+        box-shadow: none; /* Remove shadow for a cleaner look */
+    }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Reduce font size for headings */
+    }
+
+    form {
+        text-align: center; /* Center-align the form */
+    }
+
+    button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px; /* Reduce button padding */
+    }
+
+    #resultMessage {
+        font-size: 0.9rem; /* Adjust font size for result message */
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px; /* Add spacing between images */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure images scale properly */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .youtube-embed iframe {
+        width: 100%; /* Make the embedded video responsive */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .youtube-embed {
+        margin-top: 10px; /* Add spacing above the embed */
+    }
+}
