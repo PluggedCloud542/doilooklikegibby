@@ -133,41 +133,6 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Poll results section */
-#pollResults {
-    margin-top: 20px;
-    padding: 20px; /* Add padding inside the box */
-    background-color: #ffffff; /* White background for contrast */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center-align the content */
-    max-width: 400px; /* Limit the width for better readability */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-    border: 2px solid #ff7e5f; /* Add a border with a matching theme color */
-}
-
-/* Poll results heading */
-#pollResults h2 {
-    font-size: 1.5rem; /* Slightly larger heading */
-    color: #444; /* Darker gray for better contrast */
-    margin-bottom: 15px; /* Add spacing below the heading */
-}
-
-/* Poll results text */
-#pollResults p {
-    font-size: 1.2rem; /* Increase font size for better readability */
-    color: #555; /* Medium gray for text */
-    margin: 5px 0; /* Add spacing between lines */
-    font-weight: bold; /* Make the text bold */
-}
-
-/* Add hover effect for the box */
-#pollResults:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
-    transform: scale(1.02); /* Slight zoom effect */
-    transition: all 0.3s ease; /* Smooth transition */
-}
 
 /* Images */
 .image-container img {
