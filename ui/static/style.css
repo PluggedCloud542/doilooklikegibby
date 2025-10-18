@@ -1,78 +1,198 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+    color: #333; /* Dark gray text for better readability */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push the image to the bottom */
     align-items: center;
-    min-height: 100vh; /* Ensure full height of viewport */
+    min-height: 100vh; /* Full viewport height */
     margin: 0;
+    padding: 0;
 }
 
+/* Container styling */
 .container {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    max-width: 600px; /* Limit the width for better readability */
+    width: 90%; /* Responsive width */
 }
 
+/* Headings */
 h1, h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 700; /* Bold headings */
+    color: #444; /* Slightly darker gray for headings */
 }
 
-/* Center the form and its elements */
+/* Paragraphs */
+p {
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Medium gray for text */
+}
+
+/* Form styling */
 form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center-align all form elements */
+    align-items: center;
     margin-top: 20px;
 }
 
-/* Style for the radio buttons and their labels */
+/* Radio buttons and labels */
 form label {
     display: flex;
-    align-items: center; /* Align the radio button and text */
-    margin-bottom: 10px; /* Add spacing between options */
-    font-size: 1rem; /* Adjust font size */
-    font-weight: bold; /* Make the text bold */
-    cursor: pointer; /* Add a pointer cursor for better UX */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Add spacing between options */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* Add padding for a larger clickable area */
+    border: 2px solid #ccc; /* Add a border for a cleaner look */
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+    transition: all 0.3s ease; /* Smooth hover and focus effects */
+    width: 100%; /* Make the buttons stretch to the container width */
+    max-width: 300px; /* Limit the width for better readability */
+    text-align: center; /* Center-align the text */
+    position: relative; /* For positioning the radio button */
 }
 
-/* Style for the Vote button */
+/* Style for the radio buttons */
+form input[type="radio"] {
+    position: absolute; /* Position the radio button inside the label */
+    left: 10px; /* Adjust the horizontal alignment */
+    top: 42%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    appearance: none; /* Remove default styling */
+    width: 20px; /* Set custom size */
+    height: 20px; /* Set custom size */
+    border: 2px solid #ccc; /* Add a border */
+    border-radius: 50%; /* Make it circular */
+    outline: none; /* Remove focus outline */
+    background-color: #fff; /* White background */
+    transition: all 0.3s ease; /* Smooth hover and focus effects */
+}
+
+/* Hover effect for the radio buttons */
+form input[type="radio"]:hover {
+    border-color: #999; /* Darker border on hover */
+}
+
+/* Selected state for radio buttons */
+form input[type="radio"]:checked {
+    background-color: #ff7e5f; /* Highlighted background for selected option */
+    border-color: #ff7e5f; /* Match border color with background */
+    box-shadow: 0 0 0 4px rgba(255, 126, 95, 0.3); /* Add a glow effect */
+}
+
+/* Hover effect for labels */
+form label:hover {
+    background-color: #e6e6e6; /* Slightly darker background on hover */
+    border-color: #999; /* Darker border on hover */
+}
+
+/* Selected state for radio buttons */
+form input[type="radio"]:checked + label {
+    background-color: #ff7e5f; /* Highlighted background for selected option */
+    color: white; /* White text for contrast */
+    border-color: #ff7e5f; /* Match border color with background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Buttons (Vote and Show Results) */
 button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
     background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
-    color: white; /* White text */
-    text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Adjust font size */
-    font-weight: bold; /* Make text bold */
-    border: none; /* Remove default border */
-    border-radius: 30px; /* Fully rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: all 0.3s ease; /* Smooth hover effects */
-    text-align: center; /* Center-align text inside the button */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-/* Hover effect for buttons */
 button:hover {
-    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Active effect for buttons */
 button:active {
-    transform: scale(0.95); /* Slight shrink effect when clicked */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+    transform: scale(0.95); /* Shrink effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#resultMessage {
-    margin-top: 10px;
+/* Poll results section */
+#pollResults {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Testimonials section */
+.testimonials-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Cool gradient for links */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
     font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb); /* Reverse gradient */
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Combined styling for top and bottom images */
