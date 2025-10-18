@@ -47,12 +47,12 @@ def get_poll_results():
 def testimonials():
     testimonials_data = [
         {
-            "text": "You look like Gibby from ICarly, Exactly like him.",
+            "text": "You look like Gibby from ICarly, exactly like him.",
             "author": "Ricky Berwick",
             "youtube_link": "https://www.youtube.com/embed/gMqAal7Qydc?si=k6JoX5_0550FgmRt"
         },
         {
-            "text": "",
+            "text": "You got every little mark and roll on the body.",
             "author": "Hank Chill",
             "youtube_link": "https://www.youtube.com/embed/gxGvLW0nV2k?si=XeB8ZbMy4MerMwe-"
         },
@@ -67,7 +67,7 @@ def testimonials():
             "youtube_link": ""
         },
         {
-            "text": "",
+            "text": "You look like Gibby from iCarly. mmmmhmmmm.",
             "author": "John Crawley",
             "youtube_link": "https://www.youtube.com/embed/YHzdtdGJS5k?si=cDjQBZ5zAyfmzOhO"
         },
@@ -91,8 +91,19 @@ def testimonials():
             "author": "Rooster",
             "youtube_link": "https://www.youtube.com/embed/Vub1wUjc1Mw"
         },
+        {
+            "text": "You look like Gibby. You look like Gibby. Do you want me to say it again?",
+            "author": "Penny2Penthouse",
+            "youtube_link": "https://www.youtube.com/embed/F4nB3toRm4w?si=7qBD_v9cW8Rmgag4"
+        },
+        {
+            "text": "Hey Devin, you look like Gibby from iCarly.",
+            "author": "Caleb Mulili",
+            "youtube_link": "https://www.youtube.com/embed/olP_U8ATq_g?si=dd-2367-yihrWvqh"
+        },
     ]
     return render_template('testimonials.html', testimonials=testimonials_data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
