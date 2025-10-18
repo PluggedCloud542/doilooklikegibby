@@ -109,7 +109,7 @@ form input[type="radio"]:checked + label {
 /* Buttons (Vote and Show Results) */
 button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px; /* Reduce spacing above the button */
     padding: 12px 25px;
     background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
     color: white;
@@ -311,5 +311,18 @@ a:active {
 
     .youtube-embed {
         margin-top: 10px; /* Add spacing above the embed */
+    }
+    form label {
+        font-size: 0.9rem; /* Adjust label size */
+        padding: 6px 12px; /* Reduce padding for a tighter look */
+        margin-bottom: 2px; /* Reduce spacing between buttons */
+    }
+    button {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 10px 20px;
+        margin-top: 10px; /* Reduce spacing above the button */
+    }
+    .image-container img {
+        margin-top: 10px; /* Reduce spacing for images */
     }
 }
