@@ -22,24 +22,52 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+/* Center the form and its elements */
 form {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align all form elements */
+    margin-top: 20px;
 }
 
+/* Style for the radio buttons and their labels */
+form label {
+    display: flex;
+    align-items: center; /* Align the radio button and text */
+    margin-bottom: 10px; /* Add spacing between options */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Add a pointer cursor for better UX */
+}
+
+/* Style for the Vote button */
 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Fully rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth hover effects */
+    text-align: center; /* Center-align text inside the button */
 }
 
+/* Hover effect for buttons */
 button:hover {
-    background-color: #218838;
+    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active effect for buttons */
+button:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
 }
 
 #resultMessage {
@@ -78,15 +106,32 @@ button:hover {
     margin: 10px 0;
 }
 
+/* General button styling */
 a {
     display: inline-block;
     margin-top: 20px;
-    text-decoration: none;
-    color: #007bff;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 30px; /* Fully rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover effects */
 }
 
+/* Hover effect for buttons */
 a:hover {
-    text-decoration: underline;
+    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Active effect for buttons */
+a:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
 }
 
 .youtube-embed {
