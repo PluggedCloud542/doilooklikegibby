@@ -66,31 +66,31 @@ def testimonials():
             "author": "Eric Cartman",
             "youtube_link": ""
         },
-        {
-            "text": "You look like Gibby from iCarly. mmmmhmmmm.",
-            "author": "John Crawley",
-            "youtube_link": "https://www.youtube.com/embed/YHzdtdGJS5k?si=cDjQBZ5zAyfmzOhO"
-        },
-        {
-            "text": "They could think maybe you suck, or maybe they think that you're awesomesauce and poggers. Who freaking knows? UWU. Poggers.",
-            "author": "Jamishio",
-            "youtube_link": "https://www.youtube.com/embed/OHkx9bJdb5E?si=jhrL7wjPka8-Iq1J"
-        },
-        {
-            "text": "I hear you look a bit like Gibby from iCarly. Which I think is wonderful!",
-            "author": "The Sexy Unicorn",
-            "youtube_link": "https://www.youtube.com/embed/IPkISjxFAcc?si=s5T-rIUaSC3w95H1"
-        },
-        {
-            "text": "Devin, by divine resemblance and public consensus, I hereby bestow upon you the ancient, revered, and mildly cursed title of Gibby, Lord of Chaos, shirtless herald of the north.",
-            "author": "King Twink III",
-            "youtube_link": "https://www.youtube.com/embed/kZDkl0Nr69I?si=k3RX7a-o3vxjs4cE"
-        },
-        {
-            "text": "Not Carly but that other chick? She fine as hell.",
-            "author": "Rooster",
-            "youtube_link": "https://www.youtube.com/embed/Vub1wUjc1Mw"
-        },
+        # {
+        #     "text": "You look like Gibby from iCarly. mmmmhmmmm.",
+        #     "author": "John Crawley",
+        #     "youtube_link": "https://www.youtube.com/embed/YHzdtdGJS5k?si=cDjQBZ5zAyfmzOhO"
+        # },
+        # {
+        #     "text": "They could think maybe you suck, or maybe they think that you're awesomesauce and poggers. Who freaking knows? UWU. Poggers.",
+        #     "author": "Jamishio",
+        #     "youtube_link": "https://www.youtube.com/embed/OHkx9bJdb5E?si=jhrL7wjPka8-Iq1J"
+        # },
+        # {
+        #     "text": "I hear you look a bit like Gibby from iCarly. Which I think is wonderful!",
+        #     "author": "The Sexy Unicorn",
+        #     "youtube_link": "https://www.youtube.com/embed/IPkISjxFAcc?si=s5T-rIUaSC3w95H1"
+        # },
+        # {
+        #     "text": "Devin, by divine resemblance and public consensus, I hereby bestow upon you the ancient, revered, and mildly cursed title of Gibby, Lord of Chaos, shirtless herald of the north.",
+        #     "author": "King Twink III",
+        #     "youtube_link": "https://www.youtube.com/embed/kZDkl0Nr69I?si=k3RX7a-o3vxjs4cE"
+        # },
+        # {
+        #     "text": "Not Carly but that other chick? She fine as hell.",
+        #     "author": "Rooster",
+        #     "youtube_link": "https://www.youtube.com/embed/Vub1wUjc1Mw"
+        # },
         {
             "text": "You look like Gibby. You look like Gibby. Do you want me to say it again?",
             "author": "Penny2Penthouse",
