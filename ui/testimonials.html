@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Testimonials</h1>
+        <div class="testimonials-container">
+            {% for testimonial in testimonials %}
+                <div class="testimonial">
+                    <p>"{{ testimonial.text }}" - {{ testimonial.author }}</p>
+                    {% if testimonial.youtube_link %}
+                        <div class="youtube-embed">
+                            <iframe width="560" height="315" src="{{ testimonial.youtube_link }}" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('index') }}">Back to Poll</a>
+    </div>
+</body>
+</html>
