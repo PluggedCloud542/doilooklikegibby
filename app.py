@@ -61,11 +61,11 @@ def testimonials():
             "author": "RGT85",
             "youtube_link": "https://www.youtube.com/embed/HgUZzRTT4pw?si=KYzCudalEPoMLMr_"
         },
-        # {
-        #     "text": "",
-        #     "author": "Eric Cartman",
-        #     "youtube_link": ""
-        # },
+        {
+            "text": "I voted on the poll too, you look exactly like Gibby bro.",
+            "author": "Eric Cartman",
+            "youtube_link": "https://www.youtube.com/embed/jELdpVgFhfo"
+        },
         # {
         #     "text": "You look like Gibby from iCarly. mmmmhmmmm.",
         #     "author": "John Crawley",
