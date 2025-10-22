@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-import os
+import os, json
 
 app = Flask(__name__, template_folder='./ui', static_folder='./ui/static')
 
@@ -45,64 +45,12 @@ def get_poll_results():
 
 @app.route('/testimonials')
 def testimonials():
-    testimonials_data = [
-        {
-            "text": "You look like Gibby from ICarly, exactly like him.",
-            "author": "Ricky Berwick",
-            "youtube_link": "https://www.youtube.com/embed/gMqAal7Qydc?si=k6JoX5_0550FgmRt"
-        },
-        {
-            "text": "You got every little mark and roll on the body.",
-            "author": "Hank Chill",
-            "youtube_link": "https://www.youtube.com/embed/gxGvLW0nV2k?si=XeB8ZbMy4MerMwe-"
-        },
-        {
-            "text": "How many hentai games do you have on your Nintendo Switch?",
-            "author": "RGT85",
-            "youtube_link": "https://www.youtube.com/embed/HgUZzRTT4pw?si=KYzCudalEPoMLMr_"
-        },
-        {
-            "text": "I voted on the poll too, you look exactly like Gibby bro.",
-            "author": "Eric Cartman",
-            "youtube_link": "https://www.youtube.com/embed/jELdpVgFhfo"
-        },
-        # {
-        #     "text": "You look like Gibby from iCarly. mmmmhmmmm.",
-        #     "author": "John Crawley",
-        #     "youtube_link": "https://www.youtube.com/embed/YHzdtdGJS5k?si=cDjQBZ5zAyfmzOhO"
-        # },
-        # {
-        #     "text": "They could think maybe you suck, or maybe they think that you're awesomesauce and poggers. Who freaking knows? UWU. Poggers.",
-        #     "author": "Jamishio",
-        #     "youtube_link": "https://www.youtube.com/embed/OHkx9bJdb5E?si=jhrL7wjPka8-Iq1J"
-        # },
-        # {
-        #     "text": "I hear you look a bit like Gibby from iCarly. Which I think is wonderful!",
-        #     "author": "The Sexy Unicorn",
-        #     "youtube_link": "https://www.youtube.com/embed/IPkISjxFAcc?si=s5T-rIUaSC3w95H1"
-        # },
-        # {
-        #     "text": "Devin, by divine resemblance and public consensus, I hereby bestow upon you the ancient, revered, and mildly cursed title of Gibby, Lord of Chaos, shirtless herald of the north.",
-        #     "author": "King Twink III",
-        #     "youtube_link": "https://www.youtube.com/embed/kZDkl0Nr69I?si=k3RX7a-o3vxjs4cE"
-        # },
-        # {
-        #     "text": "Not Carly but that other chick? She fine as hell.",
-        #     "author": "Rooster",
-        #     "youtube_link": "https://www.youtube.com/embed/Vub1wUjc1Mw"
-        # },
-        {
-            "text": "You look like Gibby. You look like Gibby. Do you want me to say it again?",
-            "author": "Penny2Penthouse",
-            "youtube_link": "https://www.youtube.com/embed/F4nB3toRm4w?si=7qBD_v9cW8Rmgag4"
-        },
-        {
-            "text": "Hey Devin, you look like Gibby from iCarly.",
-            "author": "Caleb Mulili",
-            "youtube_link": "https://www.youtube.com/embed/olP_U8ATq_g?si=dd-2367-yihrWvqh"
-        },
-    ]
+    with open('testimonials.json', 'r', encoding='utf-8') as f:
+        testimonials_data = json.load(f)
+    # Ignore disabled entries
+    testimonials_data = [t for t in testimonials_data if not t.get('disabled')]
     return render_template('testimonials.html', testimonials=testimonials_data)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
