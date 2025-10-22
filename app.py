@@ -73,6 +73,6 @@ def testimonials():
     # Ignore disabled entries
     testimonials_data = [t for t in testimonials_data if not t.get('disabled')]
     return render_template('testimonials.html', testimonials=testimonials_data)
-# --- Run app ---
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)
