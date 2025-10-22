@@ -68,14 +68,11 @@ def get_poll_results():
 
 @app.route('/testimonials')
 def testimonials():
-    testimonials_file = 'testimonials.json'
-    if os.path.exists(testimonials_file):
-        with open(testimonials_file, 'r', encoding='utf-8') as f:
-            testimonials_data = json.load(f)
-    else:
-        testimonials_data = []
+    with open('testimonials.json', 'r', encoding='utf-8') as f:
+        testimonials_data = json.load(f)
+    # Ignore disabled entries
+    testimonials_data = [t for t in testimonials_data if not t.get('disabled')]
     return render_template('testimonials.html', testimonials=testimonials_data)
-
 # --- Run app ---
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
